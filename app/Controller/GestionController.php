@@ -1148,12 +1148,12 @@ class GestionController extends AppController {
 			// debug($this->request->data);
 			
 			if(!empty($this->request->data['User']['fecha1'])) {
-				$fecha1 = $this->request->data['User']['fecha1']."12:59:37";
+				$fecha1 = $this->request->data['User']['fecha1']."12:01:37";
 			}else{
 				$fecha1 = $fecha_min;
 			}
 			if(!empty($this->request->data['User']['fecha2'])) {
-				$fecha2 = $this->request->data['User']['fecha2']."12:59:37";
+				$fecha2 = $this->request->data['User']['fecha2']."23:59:37";
 			}else{
 				$fecha2 = $fecha_max;
 			}			
@@ -1168,13 +1168,13 @@ class GestionController extends AppController {
 					$index ++;
 				}
 			} else if(!empty($this->request->data['User']['gestore'])){
+					$gestor = $this->request->data['User']['gestore'];
 					$deudores[$this->request->data['User']['gestore']] = $this->ClienGest->consultaDeudoresPorGestores($gestor, $fecha1, $fecha2);
 			}else{
-				$gestores = $this->Gestor->gestores();
 				foreach($gestores as $g){
 				$deudores[$g] = $this->ClienGest->find('all', array(
 					'conditions' => array(
-						'gest_asig' => $g['Gestor']['Clave'],
+						'gest_asig' => $g,
 						'fecha >=' => $fecha1,
 						'fecha <=' => $fecha2,
 					)
@@ -1183,13 +1183,9 @@ class GestionController extends AppController {
 			}*/
 		}else { // sin ningun submit
 			$cont=0;
-			$gestores = $this->Gestor->gestores();
+			print_r($gestores = $this->Gestor->gestores());
 			foreach($gestores as $g){
-				$deudores[$cont] = $this->ClienGest->find('all', array(
-					'conditions' => array(
-						'gest_asig' => $g['Gestor']['Clave'],
-					)
-				));
+				$deudores[$cont] = $this->ClienGest->extraerDatosDeudores($g['Gestor']['Clave']);
 				$cont ++;
 			}
 		}		

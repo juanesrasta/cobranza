@@ -523,6 +523,11 @@ class ClienGest extends AppModel {
 		$deudores = $this->query("SELECT ClienGests.cond_deud FROM clien_gests AS ClienGest
 						WHERE ClienGests.gest_asig='".$gestor."' AND ClienGests.fecha BETWEEN '".$fecha1."' AND '".$fecha2."'");
 	}
+	
+	public function extraerDatosDeudores($gest_asig){
+		$deudores = $this->query("SELECT *FROM clien_gests AS ClienGest WHERE ClienGest.gest_asig = '".$gest_asig."' LIMIT 10");
+		return $deudores;
+	}
 	///////////FINALIZAN METODOS JUAN CARLOS////////
 	
 }

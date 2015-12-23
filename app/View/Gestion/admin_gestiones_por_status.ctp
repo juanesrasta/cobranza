@@ -102,7 +102,7 @@
 		<tr>
 			<td>
 				<?php 
-					echo $operador;
+					echo $gestores[$operador]['Gestor']['Nombre'];
 					// debug($d);
 				?>
 			</td>
