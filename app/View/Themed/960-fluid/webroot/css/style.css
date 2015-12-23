@@ -1,0 +1,274 @@
+.table_form {
+	background:none;
+	border:none;
+	width:64%;
+}
+
+.table_form td, .table_form th {
+	border:none;
+	background:none;
+}
+
+.table_form  input{
+	width:100px;
+}
+
+.seleccionado td{
+	background-color: #F7EF08;
+}
+
+.seleccionado{
+	background-color: #F7EF08;
+}
+
+table th{
+	background-color: #d3d3d3 !important;
+}
+
+table{
+	cursor: pointer;
+}
+
+.tabla_gestiones{
+	overflow: scroll;
+	max-width: 465px;
+	float: left;
+	margin-right: 30px;
+	max-height: 150px;
+}
+
+.tabla_edo_cuenta{
+	overflow: scroll;
+	max-width: 546px;
+	float: left;
+	margin-right: 30px;
+	max-height: 150px;
+}
+
+.tabla_productos{
+	overflow: scroll;
+	max-width: 705px;
+	float: left;
+	margin-right: 30px;
+	max-height: 150px;
+}
+
+.ui-dialog{
+	width:auto !important;
+}
+
+#vista_pagos td, #vista_pagos tr,  #vista_pagos th{
+	background:white !important;
+	border:none;
+}
+
+#vista_pagos table {
+	width:67%;
+	border:none;
+}
+
+.table_telefonos_datamol {
+	overflow: scroll;
+	max-height: 130px;
+}
+
+.float_left {
+	float:left;
+}
+
+.gestiones_x_dia {
+	padding:20px;
+	width:555px;
+	padding-right:0px;
+	clear:both;
+}
+
+.gestiones_realizadas {
+	padding:20px;
+	float:right;
+	width:646px;
+	padding-left:0px;
+}
+
+.gest_status{
+	width: 500px;
+	text-align: right;
+	float: left;
+	margin-right: 5%;
+}
+
+.short_input{
+	width: 100px !important;
+}
+
+.gest_stat_table{
+	border: none;
+	text-align: left;
+	width: auto;
+}
+
+.gest_stat_table tr{
+	border: none;
+}
+
+.gest_stat_table tr td{
+	border: none;
+}
+
+.gest_stat_table .input label{
+	width: auto;
+}
+
+ /*admin_gestiones_dia */
+ 
+.filtro_gestiones_dia .input label {
+	width: auto;
+	margin-left: 22px;
+}
+
+.comision_busqueda_general {
+	width:300px;
+	float:left;
+}
+
+.comision_busqueda_general .input label {
+	width:63px;
+}
+
+
+.aplicaciones_busqueda_general .input label {
+	width:88px;
+}
+
+.comision_busqueda_mes .input label,.comision_busqueda_mes .text input, .repore_cartera .text input{
+    width:70px;
+    padding: 0px;
+}
+
+.comision_busqueda_mes .input label{
+    clear:right;
+}
+
+.totales tr, .totales td, .totales table {
+    background: none;
+    border:none;
+    width:150px;
+}
+
+.totales table {
+    width:auto;
+}
+
+.totales{
+    margin-right: 125px;
+    font-size: 13px;
+}
+
+.reporte_cartera .text input,.reporte_cartera .input label, .reporte_cartera .input .select{
+    width:110px;
+    padding: 0px;
+}
+
+.productos_empresa {
+    margin-right: 505px;
+    border: 1px solid #bbb;
+    width: 225px;
+    height: 127px;
+    overflow-y: scroll;
+    float: right;
+}
+
+.filtro_fecha_confirmar .input label{
+    width:41px;
+}
+
+.filtro_fecha_confirmar .checkbox {
+    margin:0px;
+}
+
+.radio_button .input label{
+    width:81px;
+}
+
+.recepcion_pago .input label    {
+    width:90px;
+}
+
+.tabla_pagos .input label {
+    width: 221px !important;
+    font-size: 15px;
+    text-align: left;
+}
+
+.gestiones_confirmacion{
+    width:300px;
+    height:150px;
+    overflow: scroll;
+    float:left;
+}
+
+.fieldset_gestiones_confirmacion .input label {
+    width:75px;
+    text-align: left;
+}
+
+.eliminar_viejos .input label{
+    width:140px;
+}
+
+.check_asignar {
+    float:left;
+    margin-top: 25px;
+}
+
+.table_asignar_cartera {
+    border:none;
+}
+
+.table_asignar_cartera td{
+    border:none;
+    padding:0px;
+    vertical-align: middle;
+}
+
+.table_asignar_cartera .text input {
+    width:95px;
+    margin: 0px;
+}
+
+.fieldset_asignar_confirmacion {
+    width:576px;
+    padding: 2px;
+    height:119px;
+}
+
+.filtro_derecho_asignar{
+    padding:25px;
+    float: right;
+    margin-top: -162px;
+    margin-right: 199px;
+}
+
+.orden fieldset{
+    width:215px;
+    float:left;
+    margin-left: 34px;
+}
+
+.fieldset_asignar_confirmacion .input{
+    margin:0px;
+}
+
+fieldset.orden{
+   margin-left:20px;
+}
+
+.fieldset_1_preliquidacion .input label {
+    width:50px;
+}
+
+
+.busqueda_personalizada_desincorporados .input label {
+    width:50px;
+    float: none;
+}
