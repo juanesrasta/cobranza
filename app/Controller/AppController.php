@@ -4,7 +4,7 @@ App::uses('Controller', 'Controller');
 
 class AppController extends Controller {
 
-	public $uses = array('User','Permiso');
+	public $uses = array('User','Permiso','Gestor');
 	public $viewClass = 'Theme';
 	// public $helpers = array('Menu');
 

@@ -11,7 +11,7 @@ App::uses('AppController', 'Controller');
 
 class GestionController extends AppController {
 	public $components = array('Paginator', 'Attempt.Attempt');
-	public $uses = array('User','Role','Cliente','Statu','Producto','Cobranza','Gestor','ClienGest','Data','Status','Contacto','Telefono','ClienPago','Dia','Datatel','Datastatu','ClienProd');
+	public $uses = array('User','Role','Cliente','Statu','Producto','Cobranza','Gestor','ClienGest','Data','Status','Contacto','Telefono','ClienPago','Dia','Datatel','Datastatu','ClienProd','Feriado');
 		
 	public function admin_index() {
 		ini_set('memory_limit', '-1'); 
@@ -74,7 +74,7 @@ class GestionController extends AppController {
 		$hoy = $this->ClienGest->consultarUltimaFechaGestion();
 		$hoy = $hoy[0][0]['fecha'];	
 		
-		///////De la siguiente mabera se compone la fecha con formato DATE y no DATETIME que es la forma en la que esta estructurada
+		///////De la siguiente manera se compone la fecha con formato DATE y no DATETIME que es la forma en la que esta estructurada
 		/////// en la variable hoy....
 		$structurando_date=explode("-",$hoy);
 		$form_date=explode(" ",$structurando_date[2]);
@@ -93,7 +93,7 @@ class GestionController extends AppController {
 			$index ++;
 		}
 		
-		$supervisores = $this->Gestor->query("SELECT id, Nombre FROM gestors WHERE supervisa=1 AND Activo=1");
+		$supervisores = $this->Gestor->consultaSupervisores();
 		//$supervisores[0] = 'Todos';
 		//Buscar las gestiones realizadas del primer gestor 
 		$gest_realizadas = $this->ClienGest->buscar_gestiones_realizadas_por_gestor($date,$gestores[0]['Gestor']['Clave']);
@@ -1050,7 +1050,7 @@ class GestionController extends AppController {
 				$agendas[$index]=$this->ClienGest->gestionesAgenda($date, $id_gestor);
 				$atrasadas[$index]=$this->ClienGest->gestionesAtrasadas($date, $id_gestor);
 				$realizadas[$index] = $this->ClienGest->gestionesRealizadas($date, $id_gestor);
-				/*$supervisor[$index] = $this->ClienGest->ConsultaSupervisorDeGestor($id_gestor);*/
+				$supervisa[$index] = $this->ClienGest->ConsultaSupervisorDeGestor($id_gestor);
 				
 				/////SE DEFINE LAS VARIABLES QUE SE ENVIARAN EN EL OBJETO JSON////
 				$gestor = $ges['Gestor']['Nombre'];
@@ -1068,13 +1068,13 @@ class GestionController extends AppController {
 					$Drealizadas=0;
 				}
 				
-				/*if(!empty($supervisor[$index][0]['gtr1']['Nombre'])){
-					$Dsupervisor = $supervisor[$index][0]['gtr1']['Nombre'];
+				if(!empty($supervisa[$index][0]['gtr1']['Nombre'])){
+					$Dsupervisor = $supervisa[$index][0]['gtr1']['Nombre'];
 				}else{
 					$Dsupervisor=0;
-				}*/
+				}
 				//Buscar las gestiones realizadas del primer gestor 
-				$gest_realizadas = $this->ClienGest->buscar_gestiones_realizadas_hoy($hoy="2015-08-05",$gestores[0]['Gestor']['Clave']);
+				$gest_realizadas = $this->ClienGest->buscar_gestiones_realizadas_hoy($date,$gestores[0]['Gestor']['Clave']);
 				if(!empty($gest_realizadas[0]['ClienGest']['fecha_reg'])){
 					$fecha=$gest_realizadas[0]['ClienGest']['fecha_reg'];
 				}else{
@@ -1092,7 +1092,7 @@ class GestionController extends AppController {
 				}else{
 					$observacion="";
 				}
-				$datos[]=array('gestor'=>$gestor, 'nuevas'=>$Dnuevas, 'agendas'=>$Dagendas, 'atrasadas'=>$Datrasadas, 'realizadas'=>$Drealizadas,'clave'=>$clave, 'fecha_reg'=>$fecha, 'condicion'=>$condicion, 'observacion'=>$observacion);
+				$datos[]=array('gestor'=>$gestor, 'nuevas'=>$Dnuevas, 'agendas'=>$Dagendas, 'atrasadas'=>$Datrasadas, 'realizadas'=>$Drealizadas,'clave'=>$clave, 'fecha_reg'=>$fecha, 'condicion'=>$condicion, 'observacion'=>$observacion, 'spvisor'=>$Dsupervisor);
 				$index ++;
 			}
 			
@@ -1137,9 +1137,6 @@ class GestionController extends AppController {
 	
 		$empresas = $this->Cliente->find('list', array(
 		'fields' => array('rif','nombre')));
-
-		$gestores = $this->Gestor->find('list', array(
-		'fields' => array('Clave','Nombre')));
 		
 		$fechas = $this->ClienGest->procesoFechas();
 		$fecha_max = $fechas[0][0]['mayor']; 
@@ -1148,72 +1145,122 @@ class GestionController extends AppController {
 			// debug($this->request->data);
 			
 			if(!empty($this->request->data['User']['fecha1'])) {
-				$fecha1 = $this->request->data['User']['fecha1']."12:01:37";
+				$date1 = explode("-",$this->request->data['User']['fecha1']);
+				$fecha1 = $date1[2]."-".$date1[1]."-".$date1[0]." 12:01:37";
 			}else{
 				$fecha1 = $fecha_min;
 			}
 			if(!empty($this->request->data['User']['fecha2'])) {
-				$fecha2 = $this->request->data['User']['fecha2']."23:59:37";
+				$date = explode("-",$this->request->data['User']['fecha2']);
+				$fecha2 = $date[2]."-".$date[1]."-".$date[0]." 23:59:37";
 			}else{
 				$fecha2 = $fecha_max;
 			}			
-			
-			/*if(!empty($this->request->data['User']['empresa'])){ // cuando la busqueda es por empresa
+			$gestores = $this->Gestor->gestores();
+			if(!empty($this->request->data['User']['empresa'])){ // cuando la busqueda es por empresa
 			// buscamos los operadores asociados a la empresa seleccionada y hacemos la busqueda en base a los operadores luego.
-				$gestores_por_empresa = $this->ClienGest->consultaGestoresPorEmpresa($this->request->data['User']['empresa']);
+				$empresa = $this->request->data['User']['empresa'];
+				$gestores = $this->ClienGest->consultaGestoresPorEmpresa($empresa);
 				$index=0;
-				foreach($gestores_por_empresa as $g){
-					$gestor = $g['ClienGest']['gest_asig'];
-					$deudores[$g['ClienGest']['gest_asig']] = $this->ClienGest->consultaDeudoresPorGestores($gestor, $fecha1, $fecha2);
+				foreach($gestores as $g){
+					$gestor = $g['Gestor']['Clave'];
+					$deudores[$index] = $this->ClienGest->consultaDeudoresPorGestores($gestor, $fecha1, $fecha2, $empresa);
 					$index ++;
 				}
-			} else if(!empty($this->request->data['User']['gestore'])){
-					$gestor = $this->request->data['User']['gestore'];
-					$deudores[$this->request->data['User']['gestore']] = $this->ClienGest->consultaDeudoresPorGestores($gestor, $fecha1, $fecha2);
+			} else if(!empty($this->request->data['gestore'])){
+					$gestor = $this->request->data['gestore'];
+					$gestore = $this->Gestor->definoGestor($gestor);
+	$deudores[$this->request->data['gestore']] = $this->ClienGest->consultaDeudoresPorGestores($gestore[0]['Gestor']['Clave'], $fecha1, $fecha2,0);
 			}else{
+				$indice=0;
+				$gestores = $this->Gestor->gestores();
 				foreach($gestores as $g){
-				$deudores[$g] = $this->ClienGest->find('all', array(
-					'conditions' => array(
-						'gest_asig' => $g,
-						'fecha >=' => $fecha1,
-						'fecha <=' => $fecha2,
-					)
-				));
+				$deudores[$indice] = $this->ClienGest->consultaDeudoresPorGestores($g['Gestor']['Clave'],$fecha1,$fecha2,0);
+				$indice ++;
 				}
-			}*/
+			}
 		}else { // sin ningun submit
 			$cont=0;
-			print_r($gestores = $this->Gestor->gestores());
+			$gestores = $this->Gestor->gestores();
 			foreach($gestores as $g){
-				$deudores[$cont] = $this->ClienGest->extraerDatosDeudores($g['Gestor']['Clave']);
+				///AL INVOCAR LA FUNCION extraerDatosDeudores SE PASARAN DOS VARIABLES CON VALOR CERO 0 QUE REPRESENTAN LAS FECHAS y la EMPRESA, PERO, POR NO ///SER NECESARIAS PARA ESTA CONSULTA SE ENVIA 0,0
+				$deudores[$cont] = $this->ClienGest->consultaDeudoresPorGestores($g['Gestor']['Clave'],0,0,0);
 				$cont ++;
 			}
 		}		
-		$this->set(compact('empresas','gestores','deudores'));
+		$this->set(compact('empresas','gestores','gestore','deudores'));
 	}
 	
 	
 	function admin_gestiones_general(){		
 		ini_set('memory_limit', '-1'); 
-		set_time_limit(0);													// si no le pasas parametro, se trae el join
-		$joins = $this->ClienGest->busqueda_consulta_general(); // se trae del modelo el join que se usara en común
+		set_time_limit(0);	
+
+		$fechas = $this->ClienGest->procesoFechas();
+		$fecha_max = $fechas[0][0]['mayor']; 
+		$fecha_min = $fechas[0][0]['menor']; 
 		
 		if($this->request->is('post')){ // si trae algún filtro...
 			// debug($this->request->data);
+			//$conditions = $this->ClienGest->busqueda_consulta_general($this->request->data);
+			if(!empty($this->request->data['User']['fecha1'])) {
+				$date1 = explode("-",$this->request->data['User']['fecha1']);
+				$fecha1 = $date1[2]."-".$date1[1]."-".$date1[0]." 12:01:37";
+			}else{
+				$fecha1 = $fecha_min;
+			}
+			if(!empty($this->request->data['User']['fecha2'])) {
+				$date = explode("-",$this->request->data['User']['fecha2']);
+				$fecha2 = $date[2]."-".$date[1]."-".$date[0]." 23:59:37";
+			}else{
+				$fecha2 = $fecha_max;
+			}	
 			
-			$conditions = $this->ClienGest->busqueda_consulta_general($this->request->data);
+			// búsqueda por cédula, deudor o teléfono			
+			if(!empty($this->request->data['User']['buscar'])) {
+				$buscar = $this->request->data['User']['buscar'];
+			}else{
+				$buscar=0;
+			}
 			
-			$consultas = $this->ClienGest->find('all', array( // listamos todas las gestiones
-				'fields' => array('ClienGest.*','Cliente.nombre','Cobranza.NOMBRE'),
-				'joins' => $joins,
-				'conditions' => $conditions
-			));
+			// Búsqueda por gestor (nombre)
+			if(!empty($this->request->data['User']['gestore'])) {
+				$gestor = $this->request->data['User']['gestore'];
+			}else{
+				$gestor=0;
+			}
+			if(!empty($this->request->data['User']['empresa'])) {
+				$empresa = $this->request->data['User']['empresa'];
+			}else{
+				$empresa=0;
+			}
+			
+			// Búsqueda por status
+			if(!empty($this->request->data['User']['statu'])) {
+				$status = $this->request->data['User']['statu'];
+			}else{
+				$status = 0;
+			}
+			
+			//busqueda por supervisor
+			// Buscamos los gestores que corresponden a cada supervisor y los metemos en un arreglo.
+			if(!empty($this->request->data['supervisor'])) {
+				$supervisor = $this->request->data['supervisor'];
+				$gestores = $this->Gestor->consultarGestoresDeSupervisor($supervisor);
+				// Dados los gestores, hacemos un arreglo con condiciones para meterlo en el OR del query general
+				
+				$or_condition = array();
+				$num=0;
+				foreach($gestores as $g){
+					$gestor = $g['Gestor']['Clave'];
+					$consultas=$this->ClienGest->consultaBusquedaGeneral(0,0,0,0,0,$gestor);
+					$num++;
+				}				
+			}
+				$consultas=$this->ClienGest->consultaBusquedaGeneral($fecha1, $fecha2, $gestor, $empresa, $status, $gestiona=0);
 			
 		}else{ //  vista sin filtro
-			$consultas = $this->ClienGest->find('all', array( // listamos todas las gestiones
-				'fields' => array('ClienGest.*','Cliente.nombre','Cobranza.NOMBRE'),
-				'joins' => $joins
-			));
+			$consultas = $this->ClienGest->consultaBusquedaGeneral($fecha1=$fecha_min, $fecha2=$fecha_max, $gestor=0, $empresa=0, $status=0, $gestiona=0);
 		}
 		
 		// datos que se pasarán siempre para llenar los select
@@ -1222,14 +1269,9 @@ class GestionController extends AppController {
 		'fields' => array('nombre','nombre')));
 
 		$gestores = $this->Gestor->find('list', array(
-		'fields' => array('Nombre','Nombre')));
+		'fields' => array('Clave','Nombre')));
 		
-		$supervisors = $this->User->find('list', array(
-			'fields' => array('id','username'),
-				'conditions' => array(
-					'rol' => 'supervisor'
-				)
-			));
+		$supervisors = $this->Gestor->consultaSupervisores();
 		
 		$status = $this->Statu->find('list', array(
 		'fields' => array('codigo','codigo')));

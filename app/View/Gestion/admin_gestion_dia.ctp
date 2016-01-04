@@ -38,7 +38,7 @@
 			}
 		?>
 			<tr class="gestores_dia <?php echo $class ?>" name="<?php echo $d['Gestor']['Clave']?>">
-				<td><?php echo $d['Gestor']['Nombre']?></td>
+				<td><?php echo utf8_encode($d['Gestor']['Nombre']);?></td>
 				<td><?php echo $nuevas[$i][0][0]['nuevas']?></td>
 				<td><?php echo $agendas[$i][0][0]['agenda'];?></td>
 				<td><?php echo $atrasadas[$i][0][0]['atrasadas'];?></td>
@@ -147,7 +147,7 @@
 					var gestores = $('<tr class="gestores_dia '+clase+'" name="'+data[i].clave+'"><td>'+data[i].gestor+
 					'</td><td>'+data[i].nuevas+'</td><td>'+data[i].agendas+
 					'</td><td>'+data[i].atrasadas+'</td><td>'+data[i].realizadas+
-					'</td><td>'+data[i].clave+
+					'</td><td>'+data[i].spvisor+
 					'</td></tr>');
 					gestores.appendTo(".table_gestores");
 				}

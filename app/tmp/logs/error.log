@@ -2756,22 +2756,1819 @@ Stack Trace:
 #3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
-2015-12-23 17:44:47 Error: [MissingControllerException] Controller class GestionController could not be found.
+2015-12-23 21:54:12 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LIMIT' in 'where clause'
+Request URL: /cobranza_fine/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza_fine\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza_fine\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `ClienGe...', Array)
+#2 C:\wamp\www\cobranza_fine\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `ClienGe...', Array, Array)
+#3 C:\wamp\www\cobranza_fine\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `ClienGe...', false)
+#4 C:\wamp\www\cobranza_fine\lib\Cake\Model\Model.php(2947): DboSource->read(Object(ClienGest), Array)
+#5 C:\wamp\www\cobranza_fine\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#6 C:\wamp\www\cobranza_fine\app\Controller\GestionController.php(1191): Model->find('all', Array)
+#7 [internal function]: GestionController->admin_gestiones_por_status()
+#8 C:\wamp\www\cobranza_fine\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#9 C:\wamp\www\cobranza_fine\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\cobranza_fine\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#11 C:\wamp\www\cobranza_fine\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-12-23 22:02:46 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\wamp\www\cobranza_fine\lib\Cake\Model\Datasource\CakeSession.php, line 661]
+2015-12-23 22:02:47 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /cobranza_fine/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza_fine\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\cob...', 661)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\cob...', 661, Array)
+#2 C:\wamp\www\cobranza_fine\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\cob...', 661, Array)
+#3 C:\wamp\www\cobranza_fine\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-23 22:02:50 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\wamp\www\cobranza_fine\lib\Cake\Model\Datasource\CakeSession.php, line 661]
+2015-12-23 22:02:50 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /cobranza_fine/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza_fine\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\cob...', 661)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\cob...', 661, Array)
+#2 C:\wamp\www\cobranza_fine\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\cob...', 661, Array)
+#3 C:\wamp\www\cobranza_fine\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-23 22:08:16 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\cobranza_fine\app\Controller\GestionController.php, line 1186]
+2015-12-23 22:08:16 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /cobranza_fine/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza_fine\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1186)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1186, Array)
+#2 C:\wamp\www\cobranza_fine\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 1186, Array)
+#3 C:\wamp\www\cobranza_fine\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-23 22:10:43 Error: Fatal Error (4): syntax error, unexpected '$gestores_aux' (T_VARIABLE) in [C:\wamp\www\cobranza_fine\app\Controller\GestionController.php, line 1187]
+2015-12-23 22:10:43 Error: [FatalErrorException] syntax error, unexpected '$gestores_aux' (T_VARIABLE)
+Request URL: /cobranza_fine/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza_fine\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1187)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1187, Array)
+#2 C:\wamp\www\cobranza_fine\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 1187, Array)
+#3 C:\wamp\www\cobranza_fine\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-28 13:34:38 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AS ClienGest.rif_emp='7'' at line 1
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT DISTINCT...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT DISTINCT...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT DISTINCT...')
+#4 [internal function]: DboSource->query('SELECT DISTINCT...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(518): Model->query('SELECT DISTINCT...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1160): ClienGest->consultaGestoresPorEmpresa('7')
+#8 [internal function]: GestionController->admin_gestiones_por_status()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-28 13:36:27 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ClienGests.cond_deud' in 'field list'
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT ClienGes...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT ClienGes...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT ClienGes...')
+#4 [internal function]: DboSource->query('SELECT ClienGes...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(524): Model->query('SELECT ClienGes...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1164): ClienGest->consultaDeudoresPorGestores('AANARES', '2008-10-14 16:2...', '2015-08-05 17:0...')
+#8 [internal function]: GestionController->admin_gestiones_por_status()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-28 13:44:54 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2008-10-14 16:21:09' AND '2015-08-05 17:05:37' ' LIMIT 10' at line 2
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT cond_deu...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT cond_deu...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT cond_deu...')
+#4 [internal function]: DboSource->query('SELECT cond_deu...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(529): Model->query('SELECT cond_deu...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1174): ClienGest->consultaDeudoresPorGestores('RRAMIREZ', '2008-10-14 16:2...', '2015-08-05 17:0...')
+#8 [internal function]: GestionController->admin_gestiones_por_status()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-28 13:48:33 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2008-10-14 16:21:09' AND '2015-08-05 17:05:37' ' LIMIT 10' at line 2
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT cond_deu...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT cond_deu...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT cond_deu...')
+#4 [internal function]: DboSource->query('SELECT cond_deu...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(529): Model->query('SELECT cond_deu...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1174): ClienGest->consultaDeudoresPorGestores('RRAMIREZ', '2008-10-14 16:2...', '2015-08-05 17:0...')
+#8 [internal function]: GestionController->admin_gestiones_por_status()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-28 13:54:05 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2008-10-14 16:21:09' AND '2015-08-05 17:05:37' ' LIMIT 10' at line 2
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT cond_deu...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT cond_deu...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT cond_deu...')
+#4 [internal function]: DboSource->query('SELECT cond_deu...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(529): Model->query('SELECT cond_deu...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1174): ClienGest->consultaDeudoresPorGestores('RRAMIREZ', '2008-10-14 16:2...', '2015-08-05 17:0...')
+#8 [internal function]: GestionController->admin_gestiones_por_status()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-28 13:55:25 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2008-10-14 16:21:09' AND '2015-08-05 17:05:37' ' LIMIT 10' at line 2
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT cond_deu...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT cond_deu...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT cond_deu...')
+#4 [internal function]: DboSource->query('SELECT cond_deu...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(529): Model->query('SELECT cond_deu...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1174): ClienGest->consultaDeudoresPorGestores('RRAMIREZ', '2008-10-14 16:2...', '2015-08-05 17:0...')
+#8 [internal function]: GestionController->admin_gestiones_por_status()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-28 13:58:03 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2008-10-14 16:21:09' AND '2015-08-05 17:05:37' ' LIMIT 10' at line 2
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT cond_deu...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT cond_deu...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT cond_deu...')
+#4 [internal function]: DboSource->query('SELECT cond_deu...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(529): Model->query('SELECT cond_deu...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1174): ClienGest->consultaDeudoresPorGestores('RRAMIREZ', '2008-10-14 16:2...', '2015-08-05 17:0...')
+#8 [internal function]: GestionController->admin_gestiones_por_status()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-28 14:01:43 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2008-10-14 16:21:09' AND '2015-08-05 17:05:37' ' LIMIT 10' at line 2
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT cond_deu...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT cond_deu...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT cond_deu...')
+#4 [internal function]: DboSource->query('SELECT cond_deu...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(529): Model->query('SELECT cond_deu...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1169): ClienGest->consultaDeudoresPorGestores('ejecutivo3', '2008-10-14 16:2...', '2015-08-05 17:0...')
+#8 [internal function]: GestionController->admin_gestiones_por_status()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-28 14:02:54 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2008-10-14 16:21:09' AND '2015-08-05 17:05:37' ' LIMIT 10' at line 2
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT cond_deu...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT cond_deu...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT cond_deu...')
+#4 [internal function]: DboSource->query('SELECT cond_deu...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(529): Model->query('SELECT cond_deu...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1169): ClienGest->consultaDeudoresPorGestores('ejecutivo3', '2008-10-14 16:2...', '2015-08-05 17:0...')
+#8 [internal function]: GestionController->admin_gestiones_por_status()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-28 14:04:00 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2008-10-14 16:21:09' AND '2015-08-05 17:05:37' ' LIMIT 10' at line 2
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT cond_deu...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT cond_deu...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT cond_deu...')
+#4 [internal function]: DboSource->query('SELECT cond_deu...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(529): Model->query('SELECT cond_deu...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1169): ClienGest->consultaDeudoresPorGestores('ejecutivo3', '2008-10-14 16:2...', '2015-08-05 17:0...')
+#8 [internal function]: GestionController->admin_gestiones_por_status()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-28 14:07:00 Error: Fatal Error (4): syntax error, unexpected '{' in [C:\wamp\www\cobranza\app\View\Gestion\admin_gestiones_por_status.ctp, line 112]
+2015-12-28 14:07:00 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 112)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 112, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 112, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-28 17:49:06 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\cobranza\app\Controller\GestionController.php, line 1155]
+2015-12-28 17:49:06 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1155)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1155, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 1155, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-28 17:52:47 Error: Fatal Error (4): syntax error, unexpected '$fecha1' (T_VARIABLE) in [C:\wamp\www\cobranza\app\Model\ClienGest.php, line 527]
+2015-12-28 17:52:48 Error: [FatalErrorException] syntax error, unexpected '$fecha1' (T_VARIABLE)
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 527)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 527, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 527, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-28 17:54:35 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2008-10-14 16:21:09' AND '2015-08-05 17:05:37' ' LIMIT 10' at line 2
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT cond_deu...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT cond_deu...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT cond_deu...')
+#4 [internal function]: DboSource->query('SELECT cond_deu...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(532): Model->query('SELECT cond_deu...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1164): ClienGest->consultaDeudoresPorGestores('AVALERA', '2008-10-14 16:2...', '2015-08-05 17:0...')
+#8 [internal function]: GestionController->admin_gestiones_por_status()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-28 17:56:27 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2008-10-14 16:21:09' AND '2015-08-05 17:05:37' ' LIMIT 10' at line 2
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT cond_deu...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT cond_deu...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT cond_deu...')
+#4 [internal function]: DboSource->query('SELECT cond_deu...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(532): Model->query('SELECT cond_deu...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1164): ClienGest->consultaDeudoresPorGestores('AVALERA', '2008-10-14 16:2...', '2015-08-05 17:0...')
+#8 [internal function]: GestionController->admin_gestiones_por_status()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-28 18:00:45 Error: Fatal Error (4): syntax error, unexpected '$condicion' (T_VARIABLE) in [C:\wamp\www\cobranza\app\Model\ClienGest.php, line 532]
+2015-12-28 18:00:45 Error: [FatalErrorException] syntax error, unexpected '$condicion' (T_VARIABLE)
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 532)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 532, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 532, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-28 18:01:15 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '16:21:09 AND 2015-08-05 17:05:37  LIMIT 10' at line 2
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT cond_deu...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT cond_deu...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT cond_deu...')
+#4 [internal function]: DboSource->query('SELECT cond_deu...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(532): Model->query('SELECT cond_deu...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1164): ClienGest->consultaDeudoresPorGestores('AVALERA', '2008-10-14 16:2...', '2015-08-05 17:0...')
+#8 [internal function]: GestionController->admin_gestiones_por_status()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-28 18:01:42 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '16:21:09 AND 2015-08-05 17:05:37  LIMIT 10' at line 2
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT cond_deu...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT cond_deu...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT cond_deu...')
+#4 [internal function]: DboSource->query('SELECT cond_deu...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(532): Model->query('SELECT cond_deu...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1164): ClienGest->consultaDeudoresPorGestores('AVALERA', '2008-10-14 16:2...', '2015-08-05 17:0...')
+#8 [internal function]: GestionController->admin_gestiones_por_status()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-28 18:18:02 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''WHERE ClienGest.gest_asig = 'AVALERA' AND ClienGest.fecha BETWEEN 2008-10-14 16' at line 2
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT cond_deu...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT cond_deu...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT cond_deu...')
+#4 [internal function]: DboSource->query('SELECT cond_deu...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(532): Model->query('SELECT cond_deu...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1164): ClienGest->consultaDeudoresPorGestores('AVALERA', '2008-10-14 16:2...', '2015-08-05 17:0...')
+#8 [internal function]: GestionController->admin_gestiones_por_status()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-28 18:18:49 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '16:21:09 AND 2015-08-05 17:05:37  LIMIT 10' at line 2
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT cond_deu...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT cond_deu...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT cond_deu...')
+#4 [internal function]: DboSource->query('SELECT cond_deu...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(532): Model->query('SELECT cond_deu...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1164): ClienGest->consultaDeudoresPorGestores('AVALERA', '2008-10-14 16:2...', '2015-08-05 17:0...')
+#8 [internal function]: GestionController->admin_gestiones_por_status()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-28 20:01:07 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php, line 458]
+2015-12-28 20:01:09 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\cob...', 458)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\cob...', 458, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\cob...', 458, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-28 20:30:16 Error: Fatal Error (4): syntax error, unexpected ',' in [C:\wamp\www\cobranza\app\Controller\GestionController.php, line 1188]
+2015-12-28 20:30:16 Error: [FatalErrorException] syntax error, unexpected ','
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1188)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1188, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 1188, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-28 20:42:42 Error: Fatal Error (4): syntax error, unexpected '$date' (T_VARIABLE), expecting ',' or ';' in [C:\wamp\www\cobranza\app\Controller\GestionController.php, line 1154]
+2015-12-28 20:42:42 Error: [FatalErrorException] syntax error, unexpected '$date' (T_VARIABLE), expecting ',' or ';'
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1154)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1154, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 1154, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-28 21:45:57 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\wamp\www\cobranza\lib\Cake\Cache\Engine\FileEngine.php, line 128]
+2015-12-28 21:45:59 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\cob...', 128)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\cob...', 128, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\cob...', 128, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-29 11:39:56 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\wamp\www\cobranza\lib\Cake\Cache\Engine\FileEngine.php, line 128]
+2015-12-29 11:39:57 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\cob...', 128)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\cob...', 128, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\cob...', 128, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-29 12:31:33 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '100' at line 2
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT cond_deu...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT cond_deu...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT cond_deu...')
+#4 [internal function]: DboSource->query('SELECT cond_deu...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(532): Model->query('SELECT cond_deu...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1172): ClienGest->consultaDeudoresPorGestores('ejecutivo3', '2008-10-14 16:2...', '2015-08-05 17:0...')
+#8 [internal function]: GestionController->admin_gestiones_por_status()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-29 12:57:44 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND Activo=1' at line 1
+Request URL: /cobranza/gestion/admin_gestion_dia
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT id, Nomb...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT id, Nomb...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT id, Nomb...')
+#4 [internal function]: DboSource->query('SELECT id, Nomb...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\Gestor.php(103): Model->query('SELECT id, Nomb...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(84): Gestor->gestores()
+#8 [internal function]: GestionController->admin_gestion_dia()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-29 13:31:09 Error: Fatal Error (1): Call to undefined function query() in [C:\wamp\www\cobranza\app\Model\Gestor.php, line 125]
+2015-12-29 13:31:10 Error: [FatalErrorException] Call to undefined function query()
+Request URL: /cobranza/gestion/admin_gestion_dia
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\cob...', 125)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\cob...', 125, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\cob...', 125, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-29 13:31:12 Error: Fatal Error (1): Call to undefined function query() in [C:\wamp\www\cobranza\app\Model\Gestor.php, line 125]
+2015-12-29 13:31:13 Error: [FatalErrorException] Call to undefined function query()
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\cob...', 125)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\cob...', 125, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\cob...', 125, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-29 15:09:31 Error: Fatal Error (4): syntax error, unexpected 'AS' (T_AS) in [C:\wamp\www\cobranza\app\View\Gestion\admin_gestiones_general.ctp, line 18]
+2015-12-29 15:09:31 Error: [FatalErrorException] syntax error, unexpected 'AS' (T_AS)
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 18)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 18, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 18, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-29 15:10:13 Error: Fatal Error (4): syntax error, unexpected 'as' (T_AS) in [C:\wamp\www\cobranza\app\View\Gestion\admin_gestiones_general.ctp, line 18]
+2015-12-29 15:10:13 Error: [FatalErrorException] syntax error, unexpected 'as' (T_AS)
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 18)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 18, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 18, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-29 15:10:55 Error: Fatal Error (4): syntax error, unexpected 'as' (T_AS) in [C:\wamp\www\cobranza\app\View\Gestion\admin_gestiones_general.ctp, line 18]
+2015-12-29 15:10:55 Error: [FatalErrorException] syntax error, unexpected 'as' (T_AS)
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 18)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 18, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 18, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-29 15:11:37 Error: Fatal Error (4): syntax error, unexpected end of file in [C:\wamp\www\cobranza\app\View\Gestion\admin_gestiones_general.ctp, line 159]
+2015-12-29 15:11:37 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 159)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 159, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 159, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-29 19:30:06 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\cobranza\app\Controller\GestionController.php, line 1223]
+2015-12-29 19:30:07 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1223)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1223, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 1223, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-29 19:30:28 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\cobranza\app\Controller\GestionController.php, line 1223]
+2015-12-29 19:30:28 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1223)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1223, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 1223, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-29 19:32:10 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\cobranza\app\Controller\GestionController.php, line 1225]
+2015-12-29 19:32:11 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1225)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1225, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 1225, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-29 20:02:16 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\wamp\www\cobranza\app\Controller\GestionController.php, line 1278]
+2015-12-29 20:02:16 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1278)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1278, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 1278, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-30 14:49:41 Error: Fatal Error (4): syntax error, unexpected '?>', expecting function (T_FUNCTION) in [C:\wamp\www\cobranza\app\Controller\GestionController.php, line 1499]
+2015-12-30 14:49:41 Error: [FatalErrorException] syntax error, unexpected '?>', expecting function (T_FUNCTION)
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1499)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1499, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 1499, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-30 14:50:54 Error: Fatal Error (4): syntax error, unexpected '?>', expecting function (T_FUNCTION) in [C:\wamp\www\cobranza\app\Controller\GestionController.php, line 1499]
+2015-12-30 14:50:54 Error: [FatalErrorException] syntax error, unexpected '?>', expecting function (T_FUNCTION)
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1499)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1499, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 1499, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-30 15:42:16 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''WHERE  ClienGest.fecha BETWEEN '2008-10-14 16:21:09'  AND '2015-08-05 17:05:37'' at line 5
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT ClienGes...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT ClienGes...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT ClienGes...')
+#4 [internal function]: DboSource->query('SELECT ClienGes...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(558): Model->query('SELECT ClienGes...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1247): ClienGest->consultaBusquedaGeneral('2008-10-14 16:2...', '2015-08-05 17:0...', 'RRAMIREZ', 0, 0)
+#8 [internal function]: GestionController->admin_gestiones_general()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-30 15:43:19 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''WHERE  ClienGest.fecha BETWEEN '2008-10-14 16:21:09'  AND '2015-08-05 17:05:37'' at line 5
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT ClienGes...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT ClienGes...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT ClienGes...')
+#4 [internal function]: DboSource->query('SELECT ClienGes...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(558): Model->query('SELECT ClienGes...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1247): ClienGest->consultaBusquedaGeneral('2008-10-14 16:2...', '2015-08-05 17:0...', 'RRAMIREZ', 0, 0)
+#8 [internal function]: GestionController->admin_gestiones_general()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-30 15:43:41 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''WHERE  ClienGest.fecha BETWEEN '2008-10-14 16:21:09'  AND '2015-08-05 17:05:37'' at line 5
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT ClienGes...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT ClienGes...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT ClienGes...')
+#4 [internal function]: DboSource->query('SELECT ClienGes...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(558): Model->query('SELECT ClienGes...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1247): ClienGest->consultaBusquedaGeneral('2008-10-14 16:2...', '2015-08-05 17:0...', 'RRAMIREZ', 0, 0)
+#8 [internal function]: GestionController->admin_gestiones_general()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-30 15:45:44 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''WHERE  ClienGest.fecha BETWEEN '2008-10-14 16:21:09'  AND '2015-08-05 17:05:37'' at line 5
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT ClienGes...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT ClienGes...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT ClienGes...')
+#4 [internal function]: DboSource->query('SELECT ClienGes...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(558): Model->query('SELECT ClienGes...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1247): ClienGest->consultaBusquedaGeneral('2008-10-14 16:2...', '2015-08-05 17:0...', 'RRAMIREZ', 0, 0)
+#8 [internal function]: GestionController->admin_gestiones_general()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-30 15:46:55 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''WHERE  ClienGest.fecha BETWEEN '2008-10-14 16:21:09' AND '2015-08-05 17:05:37' ' at line 5
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT ClienGes...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT ClienGes...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT ClienGes...')
+#4 [internal function]: DboSource->query('SELECT ClienGes...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(558): Model->query('SELECT ClienGes...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1247): ClienGest->consultaBusquedaGeneral('2008-10-14 16:2...', '2015-08-05 17:0...', 'RRAMIREZ', 0, 0)
+#8 [internal function]: GestionController->admin_gestiones_general()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-30 15:47:17 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''WHERE  ClienGest.fecha BETWEEN '2008-10-14 16:21:09' AND '2015-08-05 17:05:37' ' at line 5
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT ClienGes...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT ClienGes...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT ClienGes...')
+#4 [internal function]: DboSource->query('SELECT ClienGes...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(558): Model->query('SELECT ClienGes...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1247): ClienGest->consultaBusquedaGeneral('2008-10-14 16:2...', '2015-08-05 17:0...', 'RRAMIREZ', 0, 0)
+#8 [internal function]: GestionController->admin_gestiones_general()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-30 15:59:47 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''WHERE  ClienGest.fecha BETWEEN '2008-10-14 16:21:09' AND '2015-08-05 17:05:37' ' at line 5
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT ClienGes...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT ClienGes...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT ClienGes...')
+#4 [internal function]: DboSource->query('SELECT ClienGes...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(559): Model->query('SELECT ClienGes...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1247): ClienGest->consultaBusquedaGeneral('2008-10-14 16:2...', '2015-08-05 17:0...', 'DGARCIA', 0, 0)
+#8 [internal function]: GestionController->admin_gestiones_general()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-30 16:01:21 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DGARCIA' ' ''
+	''  LIMIT 10' at line 5
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT ClienGes...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT ClienGes...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT ClienGes...')
+#4 [internal function]: DboSource->query('SELECT ClienGes...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(559): Model->query('SELECT ClienGes...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1247): ClienGest->consultaBusquedaGeneral('2008-10-14 16:2...', '2015-08-05 17:0...', 'DGARCIA', 0, 0)
+#8 [internal function]: GestionController->admin_gestiones_general()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-30 16:04:03 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DGARCIA' ' ''
+	''  LIMIT 10' at line 5
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT ClienGes...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT ClienGes...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT ClienGes...')
+#4 [internal function]: DboSource->query('SELECT ClienGes...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(559): Model->query('SELECT ClienGes...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1247): ClienGest->consultaBusquedaGeneral('2008-10-14 16:2...', '2015-08-05 17:0...', 'DGARCIA', 0, 0)
+#8 [internal function]: GestionController->admin_gestiones_general()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-30 16:04:41 Error: Fatal Error (4): syntax error, unexpected '$gestor' (T_VARIABLE) in [C:\wamp\www\cobranza\app\Model\ClienGest.php, line 538]
+2015-12-30 16:04:41 Error: [FatalErrorException] syntax error, unexpected '$gestor' (T_VARIABLE)
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 538)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 538, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 538, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-30 18:19:59 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\cobranza\app\Controller\GestionController.php, line 1251]
+2015-12-30 18:20:00 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1251)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1251, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 1251, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-30 19:54:21 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [C:\wamp\www\cobranza\app\Controller\GestionController.php, line 1205]
+2015-12-30 19:54:22 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1205)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1205, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 1205, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-30 20:08:54 Error: Fatal Error (4): syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) in [C:\wamp\www\cobranza\app\Controller\GestionController.php, line 1269]
+2015-12-30 20:08:55 Error: [FatalErrorException] syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION)
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1269)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1269, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 1269, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-30 20:26:39 Error: [MissingLayoutException] Layout file "C:\wamp\www\cobranza\app\View\Themed\960-fluid\Layouts\admin___.ctp" is missing.
 Exception Attributes: array (
-  'class' => 'GestionController',
+  'file' => 'C:\\wamp\\www\\cobranza\\app\\View\\Themed\\960-fluid\\Layouts\\admin___.ctp',
+)
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\View\View.php(510): View->_getLayoutFileName('admin___')
+#1 C:\wamp\www\cobranza\lib\Cake\View\View.php(479): View->renderLayout('', 'admin___')
+#2 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#3 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#4 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2015-12-30 20:50:50 Error: Fatal Error (4): syntax error, unexpected 'exit' (T_EXIT), expecting ',' or ';' in [C:\wamp\www\cobranza\app\Controller\UsersController.php, line 40]
+2015-12-30 20:50:50 Error: [FatalErrorException] syntax error, unexpected 'exit' (T_EXIT), expecting ',' or ';'
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 40, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 40, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-12-30 20:54:17 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-12-30 20:54:38 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-12-30 20:54:49 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-12-30 20:57:02 Error: [MissingActionException] Action IndexController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'IndexController',
+  'action' => 'index',
+)
+Request URL: /cobranza/index
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(IndexController), Object(CakeRequest))
+#2 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-12-30 21:19:14 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'IX_gestor_1'
+Request URL: /cobranza/users/add
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `co...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `co...')
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(1854): DboSource->create(Object(Gestor), Array, Array)
+#4 C:\wamp\www\cobranza\app\Controller\UsersController.php(112): Model->save(Array)
+#5 [internal function]: UsersController->add()
+#6 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-12-30 21:24:37 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= (Array)    LIMIT 1' at line 1
+Request URL: /cobranza/users/add
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Gestor`...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Gestor`...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Gestor`...', false)
+#4 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Gestor), Array)
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#6 C:\wamp\www\cobranza\app\Model\Gestor.php(20): Model->find('first', Array)
+#7 C:\wamp\www\cobranza\app\Controller\UsersController.php(101): Gestor->crearClave('JUNIN1', Array)
+#8 [internal function]: UsersController->add()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-12-30 21:26:04 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'IX_gestor_1'
+Request URL: /cobranza/users/add
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `co...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `co...')
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(1854): DboSource->create(Object(Gestor), Array, Array)
+#4 C:\wamp\www\cobranza\app\Controller\UsersController.php(113): Model->save(Array)
+#5 [internal function]: UsersController->add()
+#6 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-12-30 21:30:26 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'IX_gestor_1'
+Request URL: /cobranza/users/add
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `co...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `co...')
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(1854): DboSource->create(Object(Gestor), Array, Array)
+#4 C:\wamp\www\cobranza\app\Controller\UsersController.php(114): Model->save(Array)
+#5 [internal function]: UsersController->add()
+#6 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-12-30 21:32:01 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'IX_gestor_1'
+Request URL: /cobranza/users/add
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `co...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `co...')
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(1854): DboSource->create(Object(Gestor), Array, Array)
+#4 C:\wamp\www\cobranza\app\Controller\UsersController.php(113): Model->save(Array)
+#5 [internal function]: UsersController->add()
+#6 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-12-30 21:32:27 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'IX_gestor_1'
+Request URL: /cobranza/users/add
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `co...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `co...')
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(1854): DboSource->create(Object(Gestor), Array, Array)
+#4 C:\wamp\www\cobranza\app\Controller\UsersController.php(114): Model->save(Array)
+#5 [internal function]: UsersController->add()
+#6 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-01-04 12:44:49 Error: Fatal Error (4): syntax error, unexpected '"-"' (T_CONSTANT_ENCAPSED_STRING) in [C:\wamp\www\cobranza\app\View\Gestion\admin_gestiones_general.ctp, line 96]
+2016-01-04 12:44:49 Error: [FatalErrorException] syntax error, unexpected '"-"' (T_CONSTANT_ENCAPSED_STRING)
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 96)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 96, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 96, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-01-04 13:10:54 Error: Fatal Error (4): syntax error, unexpected 'var' (T_VAR) in [C:\wamp\www\cobranza\app\Controller\GestionController.php, line 1199]
+2016-01-04 13:10:54 Error: [FatalErrorException] syntax error, unexpected 'var' (T_VAR)
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1199)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1199, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 1199, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-01-04 13:11:09 Error: Fatal Error (4): syntax error, unexpected 'var' (T_VAR) in [C:\wamp\www\cobranza\app\Controller\GestionController.php, line 1199]
+2016-01-04 13:11:09 Error: [FatalErrorException] syntax error, unexpected 'var' (T_VAR)
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1199)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1199, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 1199, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-01-04 13:14:23 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR) in [C:\wamp\www\cobranza\app\Controller\GestionController.php, line 1267]
+2016-01-04 13:14:24 Error: [FatalErrorException] syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1267)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 1267, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 1267, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-01-04 13:15:58 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ClienGest' in 'where clause'
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): DboSource->read(Object(User), Array)
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#6 C:\wamp\www\cobranza\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(1080): PaginatorComponent->paginate(Array, Array, Array)
+#8 C:\wamp\www\cobranza\app\Controller\GestionController.php(1268): Controller->paginate(Array)
+#9 [internal function]: GestionController->admin_gestiones_general()
+#10 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#13 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-01-04 13:23:15 Error: [PDOException] SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+Request URL: /cobranza/gestion/admin_gestiones_general
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): DboSource->read(Object(User), Array)
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#6 C:\wamp\www\cobranza\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(1080): PaginatorComponent->paginate(Array, Array, Array)
+#8 C:\wamp\www\cobranza\app\Controller\GestionController.php(1268): Controller->paginate(Array)
+#9 [internal function]: GestionController->admin_gestiones_general()
+#10 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#13 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-01-04 13:56:20 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '2015-08%' AND ClienGest.rif_emp = '7'  LIMIT 1000' at line 2
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT cond_deu...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT cond_deu...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT cond_deu...')
+#4 [internal function]: DboSource->query('SELECT cond_deu...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(532): Model->query('SELECT cond_deu...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1167): ClienGest->consultaDeudoresPorGestores('AANARES', '2008-10-14 16:2...', '2015-08-05 17:0...', '7')
+#8 [internal function]: GestionController->admin_gestiones_por_status()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2016-01-04 13:57:08 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '2015-08%' AND ClienGest.rif_emp = '7'  LIMIT 1000' at line 2
+Request URL: /cobranza/gestion/admin_gestiones_por_status
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT cond_deu...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT cond_deu...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT cond_deu...')
+#4 [internal function]: DboSource->query('SELECT cond_deu...')
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3369): call_user_func_array(Array, Array)
+#6 C:\wamp\www\cobranza\app\Model\ClienGest.php(532): Model->query('SELECT cond_deu...')
+#7 C:\wamp\www\cobranza\app\Controller\GestionController.php(1167): ClienGest->consultaDeudoresPorGestores('AANARES', '2008-10-14 16:2...', '2015-08-05 17:0...', '7')
+#8 [internal function]: GestionController->admin_gestiones_por_status()
+#9 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#12 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2016-01-04 14:32:23 Error: [MissingTableException] Table desincorporados for model Desincorporado was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'desincorporados',
+  'class' => 'Desincorporado',
+  'ds' => 'default',
+)
+Request URL: /cobranza/cartera/admin_reporte_cartera
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3566): Model->setSource('desincorporados')
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 C:\wamp\www\cobranza\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\wamp\www\cobranza\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('Desincorporado', 'fields')
+#4 C:\wamp\www\cobranza\app\View\Cartera\admin_reporte_cartera.ctp(8): FormHelper->create(NULL)
+#5 C:\wamp\www\cobranza\lib\Cake\View\View.php(948): include('C:\wamp\www\cob...')
+#6 C:\wamp\www\cobranza\lib\Cake\View\View.php(910): View->_evaluate('C:\wamp\www\cob...', Array)
+#7 C:\wamp\www\cobranza\lib\Cake\View\View.php(471): View->_render('C:\wamp\www\cob...')
+#8 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#9 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(CarteraController), Object(CakeRequest))
+#11 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-01-04 14:32:45 Error: [MissingTableException] Table clien_pagos for model ClienPago was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'clien_pagos',
+  'class' => 'ClienPago',
+  'ds' => 'default',
+)
+Request URL: /cobranza/pagos/admin_quitar_confirmacion
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3566): Model->setSource('clien_pagos')
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#3 C:\wamp\www\cobranza\app\Controller\PagosController.php(496): Model->find('all', Array)
+#4 [internal function]: PagosController->admin_quitar_confirmacion()
+#5 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagosController), Array)
+#6 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PagosController), Object(CakeRequest))
+#8 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-01-04 14:33:12 Error: [MissingTableException] Table clien_pagos for model ClienPago was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'clien_pagos',
+  'class' => 'ClienPago',
+  'ds' => 'default',
+)
+Request URL: /cobranza/pagos/admin_quitar_confirmacion
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3566): Model->setSource('clien_pagos')
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#3 C:\wamp\www\cobranza\app\Controller\PagosController.php(496): Model->find('all', Array)
+#4 [internal function]: PagosController->admin_quitar_confirmacion()
+#5 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagosController), Array)
+#6 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PagosController), Object(CakeRequest))
+#8 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-01-04 14:33:19 Error: [MissingTableException] Table clien_pagos for model ClienPago was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'clien_pagos',
+  'class' => 'ClienPago',
+  'ds' => 'default',
+)
+Request URL: /cobranza/pagos/comision_gestor
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3566): Model->setSource('clien_pagos')
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#3 C:\wamp\www\cobranza\app\Model\ClienPago.php(50): Model->find('all', Array)
+#4 C:\wamp\www\cobranza\app\Controller\PagosController.php(310): ClienPago->buscarGestionesConfirmadasParaComision(Array)
+#5 [internal function]: PagosController->comision_gestor()
+#6 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagosController), Array)
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PagosController), Object(CakeRequest))
+#9 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-01-04 14:33:26 Error: [MissingTableException] Table clien_pagos for model ClienPago was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'clien_pagos',
+  'class' => 'ClienPago',
+  'ds' => 'default',
+)
+Request URL: /cobranza/pagos/admin_relacion_pago
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3566): Model->setSource('clien_pagos')
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#3 C:\wamp\www\cobranza\app\Model\ClienPago.php(98): Model->find('all', Array)
+#4 C:\wamp\www\cobranza\app\Controller\PagosController.php(394): ClienPago->buscarGestiones(Array)
+#5 [internal function]: PagosController->admin_relacion_pago()
+#6 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagosController), Array)
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PagosController), Object(CakeRequest))
+#9 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-01-04 14:33:33 Error: [MissingTableException] Table clien_pagos for model ClienPago was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'clien_pagos',
+  'class' => 'ClienPago',
+  'ds' => 'default',
+)
+Request URL: /cobranza/pagos/aplicaciones
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3566): Model->setSource('clien_pagos')
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#3 C:\wamp\www\cobranza\app\Controller\PagosController.php(517): Model->find('all', Array)
+#4 [internal function]: PagosController->aplicaciones()
+#5 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagosController), Array)
+#6 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PagosController), Object(CakeRequest))
+#8 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-01-04 14:33:39 Error: [MissingTableException] Table clien_pagos for model ClienPago was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'clien_pagos',
+  'class' => 'ClienPago',
+  'ds' => 'default',
+)
+Request URL: /cobranza/pagos/preliquidacion
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(3566): Model->setSource('clien_pagos')
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#3 C:\wamp\www\cobranza\app\Controller\PagosController.php(613): Model->find('all', Array)
+#4 [internal function]: PagosController->preliquidacion()
+#5 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagosController), Array)
+#6 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PagosController), Object(CakeRequest))
+#8 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-01-04 15:31:38 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'supervisa' in 'where clause'
+Request URL: /cobranza/gestion/admin_index
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): DboSource->read(Object(User), Array)
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('list', Array)
+#6 C:\wamp\www\cobranza\app\Controller\GestionController.php(23): Model->find('list', Array)
+#7 [internal function]: GestionController->admin_index()
+#8 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#9 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#11 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-01-04 16:16:27 Error: [MissingActionException] Action UsersController::Gestion() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'Gestion',
+)
+Request URL: /cobranza/users/Gestion
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-01-04 16:17:25 Error: [MissingActionException] Action UsersController::Gestion() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'Gestion',
+)
+Request URL: /cobranza/users/Gestion
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-01-04 16:18:24 Error: [MissingActionException] Action UsersController::cobranza() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'cobranza',
+)
+Request URL: /cobranza/users/cobranza
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-01-04 16:18:56 Error: [MissingActionException] Action UsersController::cobranza() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'cobranza',
+)
+Request URL: /cobranza/users/cobranza
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-01-04 16:22:52 Error: [MissingActionException] Action UsersController::cobranza() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'cobranza',
+)
+Request URL: /cobranza/users/cobranza/index
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-01-04 16:23:06 Error: [MissingActionException] Action UsersController::cobranza() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'cobranza',
+)
+Request URL: /cobranza/users/cobranza/index
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-01-04 16:24:19 Error: [MissingActionException] Action UsersController::cobranza() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'cobranza',
+)
+Request URL: /cobranza/users/cobranza
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-01-04 16:41:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
   'plugin' => NULL,
 )
-Request URL: /cobranza/gestion/admin_index
+Request URL: /cobranza/css/font-awesome/font-awesome.min.css
 Stack Trace:
 #0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2015-12-23 17:44:48 Error: Fatal Error (1): Class 'AppHelper' not found in [C:\wamp\www\cobranza\lib\Cake\View\Helper\HtmlHelper.php, line 32]
-2015-12-23 17:44:48 Error: [FatalErrorException] Class 'AppHelper' not found
-Request URL: /cobranza/gestion/admin_index
+2016-01-04 16:41:36 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/css/font-awesome/font-awesome.min.css
 Stack Trace:
-#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'AppHelpe...', 'C:\wamp\www\cob...', 32)
-#1 [internal function]: ErrorHandler::handleError(1, 'Class 'AppHelpe...', 'C:\wamp\www\cob...', 32, Array)
-#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'AppHelpe...', 'C:\wamp\www\cob...', 32, Array)
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 16:41:51 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/css/font-awesome/font-awesome.min.css
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 16:41:55 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/css/font-awesome/font-awesome.min.css
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 16:47:01 Error: [MissingViewException] View file "C:\wamp\www\cobranza\app\View\Themed\960-fluid\Users\login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\cobranza\\app\\View\\Themed\\960-fluid\\Users\\login.ctp',
+)
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-01-04 16:49:06 Error: [MissingViewException] View file "C:\wamp\www\cobranza\app\View\Themed\960-fluid\Users\login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\cobranza\\app\\View\\Themed\\960-fluid\\Users\\login.ctp',
+)
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-01-04 16:50:27 Error: [MissingViewException] View file "C:\wamp\www\cobranza\app\View\Themed\960-fluid\Users\login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\cobranza\\app\\View\\Themed\\960-fluid\\Users\\login.ctp',
+)
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-01-04 16:50:43 Error: [MissingViewException] View file "C:\wamp\www\cobranza\app\View\Themed\960-fluid\Users\login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\cobranza\\app\\View\\Themed\\960-fluid\\Users\\login.ctp',
+)
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-01-04 16:53:14 Error: [MissingControllerException] Controller class GestorsController could not be found.
+Exception Attributes: array (
+  'class' => 'GestorsController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 16:53:50 Error: [MissingControllerException] Controller class GestorsController could not be found.
+Exception Attributes: array (
+  'class' => 'GestorsController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 16:54:21 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 16:55:17 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 16:55:53 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 16:57:31 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 16:58:23 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 16:58:48 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 16:59:18 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 16:59:44 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:10:34 Error: [MissingControllerException] Controller class GestorsController could not be found.
+Exception Attributes: array (
+  'class' => 'GestorsController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:11:04 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:11:30 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:11:41 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:11:54 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:12:50 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:12:59 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:14:02 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:14:02 Error: Fatal Error (1): Call to undefined method AuthComponent::gestor() in [C:\wamp\www\cobranza\app\Controller\AppController.php, line 100]
+2016-01-04 17:14:02 Error: [FatalErrorException] Call to undefined method AuthComponent::gestor()
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\cob...', 100)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\cob...', 100, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\cob...', 100, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-01-04 17:14:27 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:14:47 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:16:37 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:17:15 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:17:27 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:20:15 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:21:00 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:38:39 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:39:30 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:40:53 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:41:34 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:42:03 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:42:29 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 17:44:22 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/users/login
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 18:04:31 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'gestores' at line 1
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('gestores', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('gestores', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(609): DboSource->fetchAll('gestores', Array, Array)
+#4 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(808): DboSource->query('gestores', Array, Object(AppModel))
+#5 C:\wamp\www\cobranza\app\Controller\UsersController.php(37): Model->__call('gestores', Array)
+#6 C:\wamp\www\cobranza\app\Controller\UsersController.php(37): AppModel->gestores()
+#7 [internal function]: UsersController->login()
+#8 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-01-04 18:12:00 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [C:\wamp\www\cobranza\app\Controller\UsersController.php, line 40]
+2016-01-04 18:12:01 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 40, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 40, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-01-04 18:14:45 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\cobranza\app\Controller\UsersController.php, line 36]
+2016-01-04 18:14:45 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 36)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 36, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 36, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-01-04 18:14:59 Error: Fatal Error (1): Call to a member function gestores() on a non-object in [C:\wamp\www\cobranza\app\Controller\UsersController.php, line 36]
+2016-01-04 18:15:00 Error: [FatalErrorException] Call to a member function gestores() on a non-object
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\cob...', 36)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\cob...', 36, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\cob...', 36, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-01-04 18:15:47 Error: Fatal Error (1): Call to a member function gestores() on a non-object in [C:\wamp\www\cobranza\app\Controller\UsersController.php, line 36]
+2016-01-04 18:15:47 Error: [FatalErrorException] Call to a member function gestores() on a non-object
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\cob...', 36)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\cob...', 36, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\cob...', 36, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-01-04 18:16:53 Error: Fatal Error (4): syntax error, unexpected 'print_r' (T_STRING) in [C:\wamp\www\cobranza\app\Controller\UsersController.php, line 37]
+2016-01-04 18:16:53 Error: [FatalErrorException] syntax error, unexpected 'print_r' (T_STRING)
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 37)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 37, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 37, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-01-04 18:17:16 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\wamp\www\cobranza\app\Controller\UsersController.php, line 37]
+2016-01-04 18:17:16 Error: [FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 37)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 37, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 37, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-01-04 19:01:52 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'feriados.Fecha>' in 'where clause'
+Request URL: /cobranza/gestion/buscar_proximas_gestiones_y_comentario
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Feriado...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Feriado...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Feriado...', false)
+#4 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Feriado), Array)
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#6 C:\wamp\www\cobranza\app\Controller\GestionController.php(841): Model->find('all', Array)
+#7 [internal function]: GestionController->buscar_proximas_gestiones_y_comentario()
+#8 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#9 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#11 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-01-04 19:01:59 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'feriados.Fecha>' in 'where clause'
+Request URL: /cobranza/gestion/buscar_proximas_gestiones_y_comentario
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Feriado...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Feriado...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Feriado...', false)
+#4 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Feriado), Array)
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#6 C:\wamp\www\cobranza\app\Controller\GestionController.php(841): Model->find('all', Array)
+#7 [internal function]: GestionController->buscar_proximas_gestiones_y_comentario()
+#8 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#9 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#11 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-01-04 19:02:05 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'feriados.Fecha>' in 'where clause'
+Request URL: /cobranza/gestion/buscar_proximas_gestiones_y_comentario
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Feriado...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Feriado...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Feriado...', false)
+#4 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Feriado), Array)
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#6 C:\wamp\www\cobranza\app\Controller\GestionController.php(841): Model->find('all', Array)
+#7 [internal function]: GestionController->buscar_proximas_gestiones_y_comentario()
+#8 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#9 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#11 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-01-04 19:02:12 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'feriados.Fecha>' in 'where clause'
+Request URL: /cobranza/gestion/buscar_proximas_gestiones_y_comentario
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Feriado...', Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Feriado...', Array, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Feriado...', false)
+#4 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Feriado), Array)
+#5 C:\wamp\www\cobranza\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#6 C:\wamp\www\cobranza\app\Controller\GestionController.php(841): Model->find('all', Array)
+#7 [internal function]: GestionController->buscar_proximas_gestiones_y_comentario()
+#8 C:\wamp\www\cobranza\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GestionController), Array)
+#9 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\cobranza\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GestionController), Object(CakeRequest))
+#11 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-01-04 20:01:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cobranza/css/font-awesome/font-awesome.min.css
+Stack Trace:
+#0 C:\wamp\www\cobranza\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-04 20:05:46 Error: Fatal Error (1): Call to undefined method AuthComponent::Gestor() in [C:\wamp\www\cobranza\app\Controller\AppController.php, line 100]
+2016-01-04 20:05:46 Error: [FatalErrorException] Call to undefined method AuthComponent::Gestor()
+Request URL: /cobranza/index
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\cob...', 100)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\cob...', 100, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\cob...', 100, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-01-04 20:06:40 Error: Fatal Error (1): Call to undefined method AuthComponent::Gestor() in [C:\wamp\www\cobranza\app\Controller\AppController.php, line 100]
+2016-01-04 20:06:40 Error: [FatalErrorException] Call to undefined method AuthComponent::Gestor()
+Request URL: /cobranza/index
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\cob...', 100)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\cob...', 100, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\cob...', 100, Array)
+#3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-01-04 20:22:33 Error: Fatal Error (4): syntax error, unexpected '$layout' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\wamp\www\cobranza\app\Controller\UsersController.php, line 15]
+2016-01-04 20:22:34 Error: [FatalErrorException] syntax error, unexpected '$layout' (T_VARIABLE), expecting function (T_FUNCTION)
+Request URL: /cobranza/
+Stack Trace:
+#0 C:\wamp\www\cobranza\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 15)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\cob...', 15, Array)
+#2 C:\wamp\www\cobranza\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\cob...', 15, Array)
 #3 C:\wamp\www\cobranza\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}

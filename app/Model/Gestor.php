@@ -100,21 +100,23 @@ class Gestor extends AppModel {
 	
 	///////METODOS DESARROLLADOS POR JUAN CARLOS/////
 	public function gestores(){
-		$gestores = $this->query("SELECT id, Nombre, Clave, supervisor FROM gestors  AS Gestor WHERE activo=1");
+		$gestores = $this->query("SELECT id, Nombre, Clave, supervisor FROM gestors  AS Gestor WHERE Activo=1");
 		return $gestores;
 	}
-	
-	/*public function consultarGestoresDeSupervisor($supervisor){
-		$datosG=$this->query("SELECT a.nombre_completo, Gestor.Clave, Gestor.id, Gestor.Nombre FROM users AS a
-								INNER JOIN gestors AS g ON g.user_id=a.id AND a.id='".$supervisor."'
-								LEFT JOIN gestors AS Gestor ON Gestor.supervisor=g.supervisor AND Gestor.activo=1 limit 2");
-		return $datosG;
-	}*/
 	
 	public function consultarGestoresDeSupervisor($supervisor){
 		$datosG=$this->query("SELECT DISTINCT Gestor.Clave, Gestor.id, Gestor.Nombre FROM gestors AS Gestor
 					WHERE supervisor ='".$supervisor."' AND Activo=1");
 		return $datosG;
+	}
+	public function definoGestor($gestor){
+		$gestor = $this->query("SELECT Gestor.Clave, Gestor.Nombre FROM gestors AS Gestor WHERE Gestor.Clave = '".$gestor."' ");
+		return $gestor;
+	}
+	
+	public function consultaSupervisores(){
+		$supervisores = $this->query("SELECT id, Nombre FROM gestors WHERE supervisa=1 AND Activo=1");
+		return $supervisores;
 	}
 	//////FINALIZAN METODOS JUAN CARLOS/////////////
 }

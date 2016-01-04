@@ -11,8 +11,15 @@
 			
 				echo $this->Form->create(null, array(
 			'url' => array_merge(array('controller' => 'gestion', 'action' => 'admin_gestiones_general'), $this->params['pass'])
-		));
-				echo $this->Form->input('supervisor', array('label' => 'Supervisor ', 'empty' => 'Todas'));
+		));?>
+				<label id="LabelSupervisor" for="LabelSupervisor">Supervisor </label>
+				<select name="supervisor" id="UserSupervisor" style="margin-bottom: 5px;">
+					<option value="">Todas</option>
+					<?php foreach($supervisors as $spvisor){?>
+						<option value="<?=$spvisor['gestors']['id'];?>"><?=$spvisor['gestors']['Nombre'];?></option>
+					<?php } ?>
+				</select>
+			<?php	
 				echo $this->Form->input('gestore', array('label' => 'Gestor ', 'empty' => 'Todos'));
 				echo $this->Form->input('empresa', array('label' => 'Empresa ', 'empty' => 'Todas'));
 				echo $this->Form->input('statu', array('label' => 'Status ', 'empty' => 'Todos'));				
@@ -33,7 +40,7 @@
 		echo '</td></tr><tr><td>';
 			echo $this->Form->input('fecha2', array('label' => 'Hasta:  ', 'empty' => 'Todos','id' => 'pickDate2','type' => 'text','readonly' => 'false', 'class' => 'short_input'));
 		echo '</td><td>';
-			echo $this->Form->submit(__('Buscar'), array('style' => 'float: right;'));
+			echo $this->Form->submit(('Buscar'), array('style' => 'float: right;'));
 		echo '</td><td>';
 			// echo $this->Form->button(__('Cerrar'), array('style' => 'float: left;', 'class' => 'boton_cerrar'));
 		echo '</td></tr><tr><td colspan="4">';
@@ -85,7 +92,10 @@
 		<tr>
 			<td>
 				<?php 
-					echo $consulta['ClienGest']['fecha'];
+					$fecha = explode("-",$consulta['ClienGest']['fecha']);
+					$fecha1 = $fecha[0]."-".$fecha[1];
+					$fech2=explode(" ",$fecha[2]);
+					echo $fecha1."-".$fech2[0];
 				?>
 			</td>
 			<td>

@@ -91,17 +91,25 @@ class UsersController extends AppController {
             $this->User->create();
             if ($this->User->save($this->request->data)) {
 				if ($this->request->data['User']['rol'] == 'operador') {//Si el usuario es operador se guarda tambien en la tabla gestores
+					$supervisa=0;
 					if ($this->request->data['User']['status'] == 'activo') {
 						$activo = 1;
 					} else {
 						$activo = 0;
 					}
-					$clave = $this->Gestor->crearClave($this->request->data['User']['nombre_completo'],$this->request->data['User']['id']);
+	$id = $this->User->query("SELECT User.id FROM users as User WHERE User.nombre_completo='".$this->request->data['User']['nombre_completo']."' ");
+					$clave = $this->Gestor->crearClave($this->request->data['User']['nombre_completo'],$id[0]['User']['id']);
 					$nuevo_gestor = array('Gestor' => array(
+						'id'=>"",
 						'Clave' => $clave,
 						'Nombre' => $this->request->data['User']['nombre_completo'],
+						'Comision'=>0,
+						'supervisa'=>$supervisa,
+						'Supervisor'=> $this->request->data['User']['supervisor_id'],
 						'Activo' => $activo,
-						'user_id' => $this->User->id,
+						'tipo'=>1,
+						'Passwor'=>$this->request->data['User']['password'],
+						'user_id' => $this->User->id,						
 					));
 					$this->Gestor->save($nuevo_gestor);
 				}

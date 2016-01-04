@@ -272,3 +272,9 @@ fieldset.orden{
     width:50px;
     float: none;
 }
+.gest_status  label{
+	margin-left:9%;
+}
+.gest_status #LabelSupervisor{
+	margin-right:20%;
+}

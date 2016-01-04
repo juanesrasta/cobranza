@@ -32,8 +32,15 @@
 					'class' => 'radio_button'
 				));
 				
-				echo $this->Form->input('gestore', array('label' => 'Gestor ', 'empty' => 'Todas'));
+				//echo $this->Form->input('gestore', array('label' => 'Gestor ', 'empty' => 'Todas'));
 			?>
+			<label for="UserGestore">Gestor </label>
+			<select name="gestore" id="UserGestore" class="form-control">
+				<option value="">TODOS</option>
+				<?php foreach($gestores as $gest){?>
+					<option value ="<?=$gest['Gestor']['Clave'];?>"><?=utf8_encode($gest['Gestor']['Nombre']);?></option>
+				<?php } ?>
+			</select>
 		</fieldset>
 	
 <?php
@@ -49,7 +56,7 @@
 		echo '</td></tr><tr><td>';
 			echo $this->Form->input('fecha2', array('label' => 'Hasta:  ', 'empty' => 'Todos','id' => 'pickDate2','type' => 'text','readonly' => 'false', 'class' => 'short_input'));
 		echo '</td><td>';
-			echo $this->Form->submit(__('Buscar'), array('style' => 'float: right;'));
+			echo $this->Form->submit(('Buscar'), array('style' => 'float: right;'));
 		echo '</td><td>';
 			// echo $this->Form->button(__('Cerrar'), array('style' => 'float: left;', 'class' => 'boton_cerrar'));
 		echo '</td></tr></table>';
@@ -102,7 +109,11 @@
 		<tr>
 			<td>
 				<?php 
-					echo $gestores[$operador]['Gestor']['Nombre'];
+				if(!empty($gestores[$operador]['Gestor']['Nombre'])){
+					echo utf8_encode($gestores[$operador]['Gestor']['Nombre']);
+				}else{
+					echo utf8_encode($gestore[0]['Gestor']['Nombre']);
+				}
 					// debug($d);
 				?>
 			</td>

@@ -11,6 +11,36 @@ class Statu extends AppModel {
         ),
     );
 	
+	/*function buscar_comentario($status,$producto){
+		$this->Producto = ClassRegistry::init('Producto');
+		if ($status == 'PP' || $status == 'MM') {
+			if ($status == 'PP') {
+				$comentario = 'PP PARA EL POR BS. ';
+			} else {
+				$comentario  = 'NOMBRE, APELLIDO,   PARENTESCO';
+			}
+			
+		} else {
+			if (!empty($status)) {
+				$empresa = $this->Producto->find('first',array(
+					'conditions' => array('Producto.codigo' => $producto)
+				));
+				$rif = $empresa['Cliente']['rif'];
+				$status = $this->find('first',array(
+					'conditions' => array(
+						'rif_emp' => $rif,
+						'Statu.codigo' => $status
+					)
+				));
+				$comentario = $status['Statu']['condicion'];
+			} else {
+				$comentario = '';
+			}
+		}
+		return($comentario);
+	}*/
+	
+	
 	function buscar_comentario($status,$producto){
 		$this->Producto = ClassRegistry::init('Producto');
 		if ($status == 'PP' || $status == 'MM') {

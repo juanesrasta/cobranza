@@ -11,33 +11,7 @@ class ClienGest extends AppModel {
 		)
 	);
 	
-	public function buscar_gestiones_nuevas($hoy) {
-		$nuevas = $this->find('all',array(
-			'fields' => array('COUNT(ClienGest.id) as nuevas','Gestor.id'),
-			'conditions' => array('DATE(ClienGest.fecha)' => $hoy),
-			'joins' => array(
-				array(
-					'table' => 'cobranzas',
-					'alias' => 'Cobranza',
-					'type' => 'INNER',
-					'conditions' => array(
-						'ClienGest.cedulaorif = Cobranza.CEDULAORIF',
-						'ClienGest.numero = Cobranza.UltGestion',
-					)
-				),
-				array(
-					'table' => 'gestors',
-					'alias' => 'Gestor',
-					'type' => 'INNER',
-					'conditions' => array(
-						'Gestor.Clave = Cobranza.Gestor',
-					),
-				),
-			),
-			'group' => array('Cobranza.Gestor')
-		));
-		return $nuevas;
-	}
+	
 		
 	public function buscar_proxima_g($cedula){
 		$ultima_gestion = $this->find('first', array(
@@ -45,34 +19,6 @@ class ClienGest extends AppModel {
 			'order' => array('ClienGest.numero DESC'),
 		));
 		return ($ultima_gestion);
-	}
-	
-	public function buscar_gestiones_agenda($hoy,$id_gestor){
-		$agenda = $this->find('all',array(
-			'fields' => array('COUNT(ClienGest.id) as agenda','Gestor.id'),
-			'conditions' => array('ClienGest.proximag' => $hoy),
-			'joins' => array(
-				array(
-					'table' => 'cobranzas',
-					'alias' => 'Cobranza',
-					'type' => 'INNER',
-					'conditions' => array(
-						'ClienGest.cedulaorif = Cobranza.CEDULAORIF',
-						'ClienGest.numero = Cobranza.UltGestion',
-					)
-				),
-				array(
-					'table' => 'gestors',
-					'alias' => 'Gestor',
-					'type' => 'INNER',
-					'conditions' => array(
-						'Gestor.Clave = Cobranza.GESTOR','Gestor.id'=>$id_gestor,
-					),
-				),
-			),
-			'group' => array('Cobranza.GESTOR')
-		));
-		return $agenda;
 	}
 	
 	public function buscar_gestiones_realizadas($hoy) { //Funcion que devuelve la cantidad de gestiones realizadas por gestor
@@ -208,7 +154,6 @@ class ClienGest extends AppModel {
 			}
 			
 			// Búsqueda por status
-			
 			if(!empty($data['User']['statu'])) {
 				$status = $data['User']['statu'];
 				$condicion_buscar = array('ClienGest.cond_deud' => $status);
@@ -216,10 +161,9 @@ class ClienGest extends AppModel {
 			}
 			
 			// Búsqueda por supervisor
-			
 			// Buscamos los gestores que corresponden a cada supervisor y los metemos en un arreglo.
-			if(!empty($data['User']['supervisor'])) {
-				$supervisor = $data['User']['supervisor'];
+			if(!empty($data['supervisor'])) {
+				$supervisor = $data['supervisor'];
 				$gestores = ClassRegistry::init('User')->find('all', array(
 					'fields' => array('DISTINCT User.username'),
 					'conditions' => array(
@@ -515,18 +459,55 @@ class ClienGest extends AppModel {
 	}
 	
 	public function consultaGestoresPorEmpresa($empresa){
-		$gestores = $this->query("SELECT DISTINCT gest_asig FROM clien_gests AS ClienGest WHERE AS ClienGest.rif_emp='".$empresa."' ");
+		$gestores = $this->query("SELECT DISTINCT(ClienGest.gest_asig), Gestor.Nombre, Gestor.Clave 
+					FROM clien_gests AS ClienGest 
+					INNER JOIN gestors AS Gestor ON Gestor.Clave = ClienGest.gest_asig
+					WHERE ClienGest.rif_emp='".$empresa."' AND Gestor.Activo=1");
 		return $gestores;
 	}
 	
-	public function consultaDeudoresPorGestores($gestor, $fecha1, $fecha2){
-		$deudores = $this->query("SELECT ClienGests.cond_deud FROM clien_gests AS ClienGest
-						WHERE ClienGests.gest_asig='".$gestor."' AND ClienGests.fecha BETWEEN '".$fecha1."' AND '".$fecha2."'");
+	public function consultaDeudoresPorGestores($gest_asig, $fecha1, $fecha2, $empresa){
+		if($empresa !='' || $empresa > 0){
+			$condicion = "WHERE ClienGest.gest_asig = '".$gest_asig."' AND ClienGest.fecha LIKE '2015%' AND ClienGest.rif_emp = '".$empresa."' ";
+		}elseif($fecha1 != 0 && $fecha2 != 0){
+			$condicion = "WHERE ClienGest.gest_asig = '".$gest_asig."' AND ClienGest.fecha BETWEEN '".$fecha1."' AND '".$fecha2."' ";
+		}else{
+			 $condicion = "WHERE ClienGest.gest_asig = '".$gest_asig."'";
+		}
+		$deudores = $this->query("SELECT cond_deud FROM clien_gests AS ClienGest 
+		 ".$condicion." LIMIT 10");
+		return $deudores;
 	}
 	
-	public function extraerDatosDeudores($gest_asig){
-		$deudores = $this->query("SELECT *FROM clien_gests AS ClienGest WHERE ClienGest.gest_asig = '".$gest_asig."' LIMIT 10");
-		return $deudores;
+	public function consultaBusquedaGeneral($fecha1, $fecha2, $gestor, $empresa, $status, $gestiona){
+		if($gestor !==0){
+			$condicion_gestor = "AND ClienGest.gest_asig='".$gestor."' ";
+		}else{
+			$condicion_gestor="";
+		}
+		if($empresa !==0){
+			$condicion_empresa="AND Cliente.nombre='".$empresa."' ";
+		}else{
+			$condicion_empresa = "";
+		}
+		if($status !==0){
+			$condicion_status = "AND ClienGest.cond_deud='".$status."' ";
+		}else{
+			$condicion_status = "";
+		}
+		if($gestiona !=0 || !empty($gestiona)){
+			$condicion_gestiona = "OR ClienGest.gest_asig='".$gestiona."' ";
+		}else{
+			$condicion_gestiona="";
+		}
+		////$condicion ="WHERE  ClienGest.fecha LIKE '".$fecha2."_%' ";  laempleo si usamos LIKE
+		$condicion ="WHERE  ClienGest.fecha BETWEEN '".$fecha1."' AND '".$fecha2."' ";
+		$general = $this->query("SELECT ClienGest.Observac1, ClienGest.observac, ClienGest.gest_asig, ClienGest.proximag, ClienGest.telefono, 		ClienGest.cedulaorif,
+			ClienGest.cond_deud, ClienGest.fecha, Cobranza.NOMBRE, Cliente.nombre
+			FROM clien_gests AS ClienGest
+			INNER JOIN clientes AS Cliente ON ClienGest.rif_emp=Cliente.rif
+			INNER JOIN cobranzas AS Cobranza ON Cobranza.CEDULAORIF=ClienGest.cedulaorif ".$condicion." ".$condicion_gestor." ".$condicion_empresa." ".$condicion_status." ".$condicion_gestiona." LIMIT 10");
+		return $general;
 	}
 	///////////FINALIZAN METODOS JUAN CARLOS////////
 	

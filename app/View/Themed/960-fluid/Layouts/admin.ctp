@@ -23,6 +23,8 @@
 
 	?>
 	 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+	 <!--<link rel="stylesheet" href="/cobranza/app/webroot/css/bootstrap.css">
+	 <link rel="stylesheet" href="/cobranza/app/webroot/css/bootstrap/webroot/css/bootstrap.min.css">-->
 
 </head>
 <body>
